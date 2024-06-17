@@ -1,0 +1,30 @@
+
+== 10. Quality Scenarios
+
+=== 10.1. Performance
+
+TODO: Describe performance-related quality scenarios.
+
+=== 10.2. Scalability
+
+TODO: Describe scalability-related quality scenarios.
+
+=== 10.3. Reliability
+
+TODO: Describe reliability-related quality scenarios.
+
+=== 10.4. Availability
+
+TODO: Describe availability-related quality scenarios.
+
+=== 10.5. Security
+
+TODO: Describe security-related quality scenarios.
+
+=== 10.6. Maintainability
+
+TODO: Describe maintainability-related quality scenarios.
+
+=== 10.7. Portability
+
+TODO: Describe portability-related quality scenarios.

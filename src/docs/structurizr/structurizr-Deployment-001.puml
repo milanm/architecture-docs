@@ -1,0 +1,54 @@
+@startuml
+set separator none
+title System - Deployment - Live
+
+left to right direction
+
+skinparam {
+  arrowFontSize 10
+  defaultTextAlignment center
+  wrapWidth 200
+  maxMessageSize 100
+}
+
+hide stereotype
+
+skinparam rectangle<<Live.DatabaseServer.Database_1>> {
+  BackgroundColor #438dd5
+  FontColor #ffffff
+  BorderColor #2e6295
+  roundCorner 20
+  shadowing false
+}
+skinparam rectangle<<Live.DatabaseServer>> {
+  BackgroundColor #ffffff
+  FontColor #000000
+  BorderColor #888888
+  roundCorner 20
+  shadowing false
+}
+skinparam rectangle<<Live.WebServer.WebApplication_1>> {
+  BackgroundColor #438dd5
+  FontColor #ffffff
+  BorderColor #2e6295
+  roundCorner 20
+  shadowing false
+}
+skinparam rectangle<<Live.WebServer>> {
+  BackgroundColor #ffffff
+  FontColor #000000
+  BorderColor #888888
+  roundCorner 20
+  shadowing false
+}
+
+rectangle "Web Server\n<size:10>[Deployment Node: Apache Tomcat]</size>" <<Live.WebServer>> as Live.WebServer {
+  rectangle "==Web Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nThe web application." <<Live.WebServer.WebApplication_1>> as Live.WebServer.WebApplication_1
+}
+
+rectangle "Database Server\n<size:10>[Deployment Node: MySQL]</size>" <<Live.DatabaseServer>> as Live.DatabaseServer {
+  rectangle "==Database\n<size:10>[Container: MySQL]</size>\n\nThe database." <<Live.DatabaseServer.Database_1>> as Live.DatabaseServer.Database_1
+}
+
+Live.WebServer.WebApplication_1 .[#707070,thickness=2].> Live.DatabaseServer.Database_1 : "<color:#707070>Reads from and writes to"
+@enduml

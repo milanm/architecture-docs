@@ -1,0 +1,10 @@
+
+== 4. Solution Strategy
+
+=== 4.1. Technology
+
+Which techonologies are used in the solution?
+
+=== 4.2. Methods for high-level design
+
+Which methods are used for high-level design?

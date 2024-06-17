@@ -1,0 +1,41 @@
+@startuml
+set separator none
+title System - Web Application - Components
+
+left to right direction
+
+skinparam {
+  arrowFontSize 10
+  defaultTextAlignment center
+  wrapWidth 200
+  maxMessageSize 100
+}
+
+hide stereotype
+
+skinparam rectangle<<System.WebApplication.ComponentA>> {
+  BackgroundColor #85bbf0
+  FontColor #000000
+  BorderColor #5d82a8
+  roundCorner 20
+  shadowing false
+}
+skinparam rectangle<<System.WebApplication.ComponentB>> {
+  BackgroundColor #85bbf0
+  FontColor #000000
+  BorderColor #5d82a8
+  roundCorner 20
+  shadowing false
+}
+skinparam rectangle<<System.WebApplication>> {
+  BorderColor #2e6295
+  FontColor #2e6295
+  shadowing false
+}
+
+rectangle "Web Application\n<size:10>[Container: Java and Spring MVC]</size>" <<System.WebApplication>> {
+  rectangle "==Component A\n<size:10>[Component: Spring Bean]</size>\n\nA component within the web application." <<System.WebApplication.ComponentA>> as System.WebApplication.ComponentA
+  rectangle "==Component B\n<size:10>[Component: Spring Bean]</size>\n\nAnother component within the web application." <<System.WebApplication.ComponentB>> as System.WebApplication.ComponentB
+}
+
+@enduml

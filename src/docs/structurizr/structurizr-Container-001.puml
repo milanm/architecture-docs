@@ -1,0 +1,51 @@
+@startuml
+set separator none
+title System - Containers
+
+left to right direction
+
+skinparam {
+  arrowFontSize 10
+  defaultTextAlignment center
+  wrapWidth 200
+  maxMessageSize 100
+}
+
+hide stereotype
+
+skinparam rectangle<<System.Database>> {
+  BackgroundColor #438dd5
+  FontColor #ffffff
+  BorderColor #2e6295
+  roundCorner 20
+  shadowing false
+}
+skinparam person<<User>> {
+  BackgroundColor #08427b
+  FontColor #ffffff
+  BorderColor #052e56
+  shadowing false
+}
+skinparam rectangle<<System.WebApplication>> {
+  BackgroundColor #438dd5
+  FontColor #ffffff
+  BorderColor #2e6295
+  roundCorner 20
+  shadowing false
+}
+skinparam rectangle<<System>> {
+  BorderColor #0b4884
+  FontColor #0b4884
+  shadowing false
+}
+
+person "==User\n<size:10>[Person]</size>\n\nA user of the system." <<User>> as User
+
+rectangle "System\n<size:10>[Software System]</size>" <<System>> {
+  rectangle "==Web Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nThe web application." <<System.WebApplication>> as System.WebApplication
+  rectangle "==Database\n<size:10>[Container: MySQL]</size>\n\nThe database." <<System.Database>> as System.Database
+}
+
+User .[#707070,thickness=2].> System.WebApplication : "<color:#707070>Uses"
+System.WebApplication .[#707070,thickness=2].> System.Database : "<color:#707070>Reads from and writes to"
+@enduml

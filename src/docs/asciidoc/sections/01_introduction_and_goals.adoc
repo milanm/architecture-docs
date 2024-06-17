@@ -1,0 +1,2 @@
+== 1. Introduction and Goals
+This section provides an overview of the system's goals and stakeholders.

@@ -1,0 +1,12 @@
+
+== 8. Cross-cutting Concepts
+
+Description of cross-cutting concerns such as security, performance, and logging.
+
+=== 8.1. Security
+
+==== 8.1.1. Authentication 
+
+=== 8.2. Performance
+
+=== 8.3. Logging

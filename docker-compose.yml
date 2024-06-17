@@ -1,0 +1,23 @@
+services:
+  generate-diagrams:
+    image: structurizr/cli:latest
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: ["export", "-workspace", "src/docs/structurizr/structurizr.dsl", "-format", "plantuml"]
+
+  generate-docs:
+    image: asciidoctor/docker-asciidoctor:latest
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - PLANTUML_LIMIT_SIZE=8192
+    command: ["asciidoctor", "-r", "asciidoctor-diagram", "-D", "build/docs", "src/docs/asciidoc/index.adoc"]
+
+  serve-docs:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./build/docs:/usr/share/nginx/html

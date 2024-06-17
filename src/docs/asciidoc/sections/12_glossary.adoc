@@ -1,0 +1,21 @@
+
+== 12. Glossary
+
+|===
+| Term | Definition
+
+| Term 1
+| Definition of term 1
+
+| Term 2
+| Definition of term 2
+
+| Term 3
+| Definition of term 3
+
+| Term 4
+| Definition of term 4
+
+| Term 5
+| Definition of term 5
+|===

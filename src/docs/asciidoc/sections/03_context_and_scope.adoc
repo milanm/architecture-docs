@@ -1,0 +1,9 @@
+
+== 3. System Context and Scope
+
+=== 3.1. System Context
+
+[plantuml, structurizr-SystemContext-001, png]
+....
+include::../../structurizr/structurizr-SystemContext-001.puml[]
+....

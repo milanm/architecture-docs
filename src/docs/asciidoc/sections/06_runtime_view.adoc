@@ -1,0 +1,6 @@
+
+== 6. Runtime View
+
+It shows the behavior of one of several building blocks in the form of essential use cases.
+
+=== 6.1. Login use case

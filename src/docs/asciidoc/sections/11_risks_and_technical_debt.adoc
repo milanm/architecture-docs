@@ -1,0 +1,10 @@
+
+== 11. Risks and Technical Debt
+
+=== 11.1. Risks
+
+Identify and describe potential risks.
+
+=== 11.2. Technical Debt
+
+Identify and describe technical debt in the system.

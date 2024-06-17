@@ -1,0 +1,17 @@
+= Software Architecture Documentation Template
+Version 1.0, June 2024.
+:toc:
+:toc-placement: preamble
+
+include::sections/01_introduction_and_goals.adoc[]
+include::sections/02_constraints.adoc[]
+include::sections/03_context_and_scope.adoc[]
+include::sections/04_solution_strategy.adoc[]
+include::sections/05_building_block_view.adoc[]
+include::sections/06_runtime_view.adoc[]
+include::sections/07_deployment_view.adoc[]
+include::sections/08_crosscutting_concepts.adoc[]
+include::sections/09_decision_log.adoc[]
+include::sections/10_quality_scenarios.adoc[]
+include::sections/11_risks_and_technical_debt.adoc[]
+include::sections/12_glossary.adoc[]

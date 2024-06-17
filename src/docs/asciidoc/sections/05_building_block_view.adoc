@@ -1,0 +1,17 @@
+
+== 5. Building Block View
+
+=== 5.1: System Context
+
+[plantuml, structurizr-Container-001, png]
+....
+include::../../structurizr/structurizr-Container-001.puml[]
+....
+
+=== 5.2: Container
+
+[plantuml, structurizr-Component-001, png]
+....
+include::../../structurizr/structurizr-Component-001.puml[]
+....
+

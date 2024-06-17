@@ -1,0 +1,11 @@
+
+== 7. Deployment View
+
+This section describes how the software system is deployed, including the hardware, software, and networking components.
+
+=== 7.1. Deployment Diagram
+
+[plantuml, structurizr-Deployment-001, png]
+....
+include::../../structurizr/structurizr-Deployment-001.puml[]
+....
