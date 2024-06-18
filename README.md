@@ -1,6 +1,6 @@
 # Software Architecture Documentation with arc42 and C4 Model 
 
-This repository provides an example of generating architecture documentation using the arc42 template and the C4 model, with the help of Structurizr CLI and Asciidoctor. The documentation includes various architectural views and diagrams, generated automatically using Docker and Docker Compose locally, or by using GitHub pages.
+This repository provides an example of generating architecture documentation using the [arc42 template](https://arc42.org/) and the [C4 model](https://c4model.com/), with the help of Structurizr CLI and Asciidoctor. The documentation includes various architectural views and diagrams, generated automatically using Docker and Docker Compose locally, or by using GitHub pages.
 
 The complete explanation of the process is explain in [the text](https://newsletter.techworld-with-milan.com/p/documenting-software-architectures).
 
@@ -25,8 +25,11 @@ The repository demonstrates how to:
 
 ## Technologies Used
 
+- **[arc42 template](https://arc42.org/)**: Used to define a structure of documentation.
 - **[Structurizr DSL](https://structurizr.com/help/dsl)**: Used to define the architecture model.
+- **[Structurizr CLI](https://github.com/structurizr/cli)**: Used to export [PlantUML diagrams](https://plantuml.com/) from Structurizr DSL.
 - **[PlantUML](http://plantuml.com/)**: Used to generate UML diagrams.
+- **[AsciiDoc](https://asciidoc.org/)**: Used as a markup language for documents.
 - **[Asciidoctor](https://asciidoctor.org/)**: Used to convert AsciiDoc files to HTML.
 
 ## Directory Structure
