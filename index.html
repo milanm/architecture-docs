@@ -565,11 +565,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_9_architecture_decisions_records">9. Architecture Decisions Records</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_9_1_login_decision">9.1. Login decision</h3>
+<h3 id="_9_1_adr_001_login_decision">9.1. ADR-001: Login decision</h3>
 <div class="sect3">
 <h4 id="_9_1_1_context_and_problem_statement">9.1.1. Context and Problem Statement</h4>
 <div class="paragraph">
-<p>We want to enable user login.</p>
+<p>We need to choose an authentication method for user login in our new application. The method should ensure security, ease of use, and scalability while providing a seamless user experience.</p>
 </div>
 </div>
 <div class="sect3">
@@ -577,10 +577,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Option 1</p>
+<p><strong>Option 1</strong>: Traditional Username and Password Authentication</p>
 </li>
 <li>
-<p>Option 2</p>
+<p><strong>Option 2</strong>: OAuth 2.0 with Social Login</p>
+</li>
+<li>
+<p><strong>Option 3</strong>: Single Sign-On (SSO) with SAML</p>
 </li>
 </ul>
 </div>
@@ -588,7 +591,95 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_9_1_3_decision_outcome">9.1.3. Decision Outcome</h4>
 <div class="paragraph">
-<p>We selected option 1, because X.</p>
+<p>We have decided to implement OAuth 2.0 with Social Login.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rationale</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Security</strong>: OAuth 2.0 is a widely adopted and secure protocol for authorization.</p>
+</li>
+<li>
+<p><strong>User Convenience</strong>: Social login allows users to log in with existing accounts (e.g., Google, Facebook), reducing friction and improving user experience.</p>
+</li>
+<li>
+<p><strong>Scalability</strong>: OAuth 2.0 can handle a large number of users and integrates well with third-party identity providers.</p>
+</li>
+<li>
+<p><strong>Reduced Maintenance</strong>: Leveraging third-party identity providers reduces the burden of managing user credentials and security.</p>
+</li>
+<li>
+<p><strong>Adoption and Integration</strong>: Many users prefer using their social accounts for quick access, and many modern applications support OAuth 2.0, making it easier to integrate with other services.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_9_2_adr_002_technology_selection">9.2. ADR-002: Technology selection</h3>
+<div class="sect3">
+<h4 id="_9_2_1_context_and_problem_statement">9.2.1. Context and Problem Statement</h4>
+<div class="paragraph">
+<p>We need to choose a technology stack for developing our new web application. The application requires a robust backend, an interactive frontend, and seamless integration with third-party services.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_9_2_2_considered_options">9.2.2. Considered Options</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Option 1</strong>: Node.js with Express, React.js, PostgreSQL, AWS</p>
+</li>
+<li>
+<p><strong>Option 2</strong>: Python with Django, Angular, MySQL, Google Cloud Platform</p>
+</li>
+<li>
+<p><strong>Option 3</strong>: Ruby on Rails, Vue.js, MongoDB, Microsoft Azure</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_9_2_3_decision_outcome">9.2.3. Decision Outcome</h4>
+<div class="paragraph">
+<p>We have decided to use the following technology stack:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Backend</strong>: Node.js with Express framework</p>
+</li>
+<li>
+<p><strong>Frontend</strong>: React.js</p>
+</li>
+<li>
+<p><strong>Database</strong>: PostgreSQL</p>
+</li>
+<li>
+<p><strong>Hosting</strong>: AWS (using services such as EC2, S3, and RDS)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Rationale</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Node.js and Express</strong>: Chosen for their performance, scalability, and large ecosystem.</p>
+</li>
+<li>
+<p><strong>React.js</strong>: Selected for its component-based architecture, ease of use, and strong community support.</p>
+</li>
+<li>
+<p><strong>PostgreSQL</strong>: Preferred for its robustness, ACID compliance, and advanced querying capabilities.</p>
+</li>
+<li>
+<p><strong>AWS</strong>: Offers a reliable and scalable cloud infrastructure with a range of services that meet our needs.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -700,7 +791,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-06-18 09:02:49 UTC
+Last updated 2024-06-18 15:41:35 UTC
 </div>
 </div>
 </body>
