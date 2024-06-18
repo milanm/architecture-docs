@@ -1,0 +1,29 @@
+
+=== 9.2. ADR-002: Technology selection
+
+==== 9.2.1. Context and Problem Statement
+
+We need to choose a technology stack for developing our new web application. The application requires a robust backend, an interactive frontend, and seamless integration with third-party services.
+
+==== 9.2.2. Considered Options
+
+* **Option 1**: Node.js with Express, React.js, PostgreSQL, AWS
+* **Option 2**: Python with Django, Angular, MySQL, Google Cloud Platform
+* **Option 3**: Ruby on Rails, Vue.js, MongoDB, Microsoft Azure
+
+
+==== 9.2.3. Decision Outcome
+
+We have decided to use the following technology stack:
+
+* **Backend**: Node.js with Express framework
+* **Frontend**: React.js
+* **Database**: PostgreSQL
+* **Hosting**: AWS (using services such as EC2, S3, and RDS)
+
+**Rationale**:
+
+* **Node.js and Express**: Chosen for their performance, scalability, and large ecosystem.
+* **React.js**: Selected for its component-based architecture, ease of use, and strong community support.
+* **PostgreSQL**: Preferred for its robustness, ACID compliance, and advanced querying capabilities.
+* **AWS**: Offers a reliable and scalable cloud infrastructure with a range of services that meet our needs.

@@ -1,15 +1,24 @@
 
-=== 9.1. Login decision
+=== 9.1. ADR-001: Login decision
 
 ==== 9.1.1. Context and Problem Statement
 
-We want to enable user login.
+We need to choose an authentication method for user login in our new application. The method should ensure security, ease of use, and scalability while providing a seamless user experience.
 
 ==== 9.1.2. Considered Options
 
-* Option 1
-* Option 2
+* **Option 1**: Traditional Username and Password Authentication
+* **Option 2**: OAuth 2.0 with Social Login
+* **Option 3**: Single Sign-On (SSO) with SAML
 
 ==== 9.1.3. Decision Outcome
 
-We selected option 1, because X.
+We have decided to implement OAuth 2.0 with Social Login.
+
+**Rationale**:
+
+* **Security**: OAuth 2.0 is a widely adopted and secure protocol for authorization.
+* **User Convenience**: Social login allows users to log in with existing accounts (e.g., Google, Facebook), reducing friction and improving user experience.
+* **Scalability**: OAuth 2.0 can handle a large number of users and integrates well with third-party identity providers.
+* **Reduced Maintenance**: Leveraging third-party identity providers reduces the burden of managing user credentials and security.
+* **Adoption and Integration**: Many users prefer using their social accounts for quick access, and many modern applications support OAuth 2.0, making it easier to integrate with other services.
