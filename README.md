@@ -76,12 +76,6 @@ Open your browser and go to http://localhost:8080 to view the generated document
 ## GitHub Pages Demo
 You can view the demo of this documentation on GitHub Pages at the following [URL](https://milanm.github.io/architecture-docs/).
 
-## Explanation of Key Files
-- src/docs/structurizr/structurizr.dsl: Defines the architecture using Structurizr DSL.
-- src/docs/asciidoc/index.adoc: Main AsciiDoc file that includes other sections.
-- src/docs/asciidoc/sections/: Directory containing individual AsciiDoc section files.
-- docker-compose.yml: Docker Compose configuration to orchestrate the generation and serving of documentation.
-
 ## Customization
 You can customize the Structurizr DSL file (structurizr.dsl) to reflect your own system's architecture. Similarly, you can edit the AsciiDoc files in the sections directory to include more detailed information about your system.
 
