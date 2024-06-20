@@ -4,6 +4,8 @@ This repository provides an example of generating architecture documentation usi
 
 The complete explanation of the process is explain in [the text](https://newsletter.techworld-with-milan.com/p/documenting-software-architectures).
 
+![Workflow](/images/github_workflow.png "Workflow")
+
 ## Give a Star! :star:
 
 If you like or are using this project to learn or start your solution, please give it a star. Thanks!
