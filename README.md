@@ -2,7 +2,7 @@
 
 This repository provides an example of generating architecture documentation using the [arc42 template](https://arc42.org/) and the [C4 model](https://c4model.com/), with the help of Structurizr CLI and Asciidoctor. The documentation includes various architectural views and diagrams, generated automatically using Docker and Docker Compose locally, or by using GitHub pages.
 
-The complete explanation of the process is explain in [the text](https://newsletter.techworld-with-milan.com/p/documenting-software-architectures).
+The complete process is explained in details in [the text](https://newsletter.techworld-with-milan.com/p/documenting-software-architectures).
 
 ![Workflow](/images/github_workflow.png "Workflow")
 
