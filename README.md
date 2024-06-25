@@ -50,7 +50,7 @@ architecture-docs/
 │       │   ├── structurizr.properties
 │       │   ├── ... Generated PUML files
 ├── .github /                           # GitHub Workflows
-    └── docs/       
+│   └── docs/       
 │       ├── deploy-confluence.yaml      # Deploy to Confluence Workflow
 │       └── deploy-docs.yaml            # Deploy to GitHub Pages Workflow
 ```
