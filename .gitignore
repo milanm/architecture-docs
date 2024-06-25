@@ -1,0 +1,6 @@
+build
+.gradle
+*dtcw*
+.puml
+src/**/structurizr/*.json
+src/**/structurizr/.structurizr

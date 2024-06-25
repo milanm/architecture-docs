@@ -1,0 +1,48 @@
+name: Deploy Documentation to Confluence
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      - name: Generate PlantUML diagrams
+        run: docker-compose run --rm generate-diagrams
+
+      - name: Generate HTML documentation
+        run: docker-compose run --rm generate-docs
+
+      - name: Pull doctoolchain
+        run: docker pull doctoolchain/doctoolchain:v3.3.1
+
+      - name: Setup docToolChain wrapper
+        run: |
+          curl -Lo dtcw https://doctoolchain.org/dtcw
+          chmod +x dtcw
+          ./dtcw tasks --group doctoolchain
+
+      - name: Deploy to Confluence
+        env:
+          CONFLUENCE_USERNAME: ${{ secrets.CONFLUENCE_USERNAME }}
+          CONFLUENCE_PASSWORD: ${{ secrets.CONFLUENCE_PASSWORD }}
+        run: |
+          sudo ./dtcw publishToConfluence -PconfluenceUser="$CONFLUENCE_USERNAME" -PconfluencePass="$CONFLUENCE_PASSWORD"
