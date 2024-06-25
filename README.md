@@ -1,6 +1,6 @@
 # Software Architecture Documentation with arc42 and C4 Model 
 
-This repository provides an example of generating architecture documentation using the [arc42 template](https://arc42.org/) and the [C4 model](https://c4model.com/), with the help of Structurizr CLI and Asciidoctor. The documentation includes various architectural views and diagrams, generated automatically using Docker and Docker Compose locally, or by using GitHub pages.
+This repository provides an example of generating architecture documentation using the [arc42 template](https://arc42.org/) and the [C4 model](https://c4model.com/), with the help of Structurizr CLI and Asciidoctor. The documentation includes various architectural views and diagrams, generated automatically using Docker and Docker Compose locally, or by using GitHub pages or Confluence.
 
 The complete process is explained in details in [the text](https://newsletter.techworld-with-milan.com/p/documenting-software-architectures).
 
@@ -38,17 +38,21 @@ The repository demonstrates how to:
 
 ```
 architecture-docs/
-├── src/                       # Source files for documentation
-│   └── docs/                  # Documentation source directory
-│       ├── asciidoc/          # AsciiDoc files
-│       │   ├── sections/      # Individual section files for arc42 template
+├── src/                                # Source files for documentation
+│   └── docs/                           # Documentation source directory
+│       ├── asciidoc/                   # AsciiDoc files
+│       │   ├── sections/               # Individual section files for arc42 template
 │       │   │   ├── 01_introduction_and_goals.adoc
 │       │   │   ├── ...
-│       │   └── index.adoc     # Main AsciiDoc file including all sections
-│       ├── structurizr/       # Structurizr DSL files and generated PlantUML diagrams
+│       │   └── index.adoc              # Main AsciiDoc file including all sections
+│       ├── structurizr/                # Structurizr DSL files and generated PlantUML diagrams
 │       │   ├── structurizr.dsl
 │       │   ├── structurizr.properties
 │       │   ├── ... Generated PUML files
+├── .github /                           # GitHub Workflows
+    └── docs/       
+│       ├── deploy-confluence.yaml      # Deploy to Confluence Workflow
+│       └── deploy-docs.yaml            # Deploy to GitHub Pages Workflow
 ```
 
 ## Usage
